@@ -1,0 +1,9 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    智联网络
+  </view>
+  <view class="usermotto">
+    <button type="primary" bindtap="onConnetWiFi">{{motto}}</button>
+  </view>
+</view>
