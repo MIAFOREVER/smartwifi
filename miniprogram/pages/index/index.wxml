@@ -16,12 +16,14 @@
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block> -->
-    <image style="width: 200px; height: 200px; background-color: #eeeeee;" src="./img/logo.jpg"></image>
-    <view class="choose_user">
-      <button type="primary" bindtap="bindMerchantTap">我是商家</button>
-    </view>
-    <view class="choose_user">
-      <button type="primary" bindtap="bindSalesTap">我是推广</button>
-    </view>
+    <image style="width: 200px; height: 200px; background-color: #eeeeee;" src="../../logo/logo.jpg"></image>
+    <view class="login">
+      <view class="choose_user">
+        <button type="primary" bindtap="bindMerchantTap">我是商家</button>
+      </view>
+      <view class="choose_user">
+        <button type="primary" bindtap="bindSalesTap">我是推广</button>
+      </view>
+    </view> 
   </view>
 </view>

@@ -2,6 +2,7 @@
 .btn-area{
   position: absolute;
   bottom: 50px;
+  left: 120px;
 }
 
 .page-section{
@@ -14,10 +15,4 @@
 
 .page-section-title{
   margin: 17px;
-}
-
-.code_img{
-  margin-top: 50px;
-  width: 200px;
-  height: 200px;
 }

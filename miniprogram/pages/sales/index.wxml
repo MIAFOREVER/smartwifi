@@ -1,24 +1,40 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <!-- <block wx:if="{{canIUseOpenData}}">
-      <view class="userinfo-avatar" bindtap="bindViewTap">
-        <open-data type="userAvatarUrl"></open-data>
+  <image style="width: 200px; height: 200px; background-color: #eeeeee;" src="../../logo/logo.jpg"></image>
+  <view class="box" bindtap="bindCreateQrCode">
+    <image class="icon" src="./img/wifi.png"></image>
+    <view class="text-container">
+      <view class="title">
+        创建WIFI码
       </view>
-      <open-data type="userNickName"></open-data>
-    </block>
-    <block wx:elif="{{!hasUserInfo}}">
-      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
-      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-      <view wx:else> 请使用1.4.4及以上版本基础库 </view>
-    </block>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block> -->
-    智联网络
+      <view class="subtitle">
+        一键连接，无需告知密码
+      </view>
+    </view>
+    <image class="click-icon" src="./img/click.png"></image>
   </view>
-  <view class="usermotto">
-    <button type="primary" bindtap="onConnetWiFi">{{motto}}</button>
+  <view class="box" bindtap="bindMyIncome">
+    <image class="icon" src="./img/money.png"></image>
+    <view class="text-container">
+      <view class="title">
+        我的二维码
+      </view>
+      <view class="subtitle">
+        查看已经创建的二维码和收益
+      </view>
+    </view>
+    <image class="click-icon" src="./img/click.png"></image>
+  </view>
+  <view class="box" bindtap="bindMyIncome">
+    <image class="icon" src="./img/rank.png"></image>
+    <view class="text-container">
+      <view class="title">
+        收益排行榜
+      </view>
+      <view class="subtitle">
+        查看当前其他推广人员的收益排行榜
+      </view>
+    </view>
+    <image class="click-icon" src="./img/click.png"></image>
   </view>
 </view>

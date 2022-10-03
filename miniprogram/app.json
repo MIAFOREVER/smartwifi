@@ -3,8 +3,11 @@
     "pages/index/index",
     "pages/choose_user/index",
     "pages/create_qrcode/index",
+    "pages/qrcode_page/index",
     "pages/merchant/index",
     "pages/sales/index",
+    "pages/sales_income/index",
+    "pages/merchant_scan/index",
     "pages/logs/logs"
   ],
   "window": {
