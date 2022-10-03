@@ -8,4 +8,25 @@
   text-align: center;
   border-radius: 20px;
   line-height: 40px;
+  margin-bottom: 30px;
+}
+.code_box_record {
+  display: flex;
+}
+
+.code_box_record_title {
+  width: 33%;
+  font-size: 26rpx;
+  color: rgba(0, 0, 0, 0.5);
+  padding: 20rpx 0;
+}
+
+.code_box_record_detail {
+  width: 33%;
+  font-size: 26rpx;
+  padding: 20rpx 0;
+}
+
+.box{
+  width: 80%;
 }

@@ -1,0 +1,7 @@
+<!--index.wxml-->
+<view class="container">
+  <view wx:if="{{codeSrc}}">
+    <image class="code_img" src="{{codeSrc}}"></image>
+    <button style="margin: auto; margin-top: 50px " class="download_qrcode" type="primary" bindtap="downloadQrCode">保存二维码</button>
+  </view>
+</view>

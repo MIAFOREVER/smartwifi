@@ -3,6 +3,7 @@
     "pages/index/index",
     "pages/choose_user/index",
     "pages/create_qrcode/index",
+    "pages/preview_qrcode/index",
     "pages/qrcode_page/index",
     "pages/merchant/index",
     "pages/sales/index",

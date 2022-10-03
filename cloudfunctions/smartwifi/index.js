@@ -2,6 +2,7 @@ const getOpenId = require('./getOpenId/index');
 const getMiniProgramCode = require('./getMiniProgramCode/index');
 const notifyCreateQrCode = require('./notifyCreateQrCode/index');
 const selectSalesQrCode = require('./selectSalesQrCode/index');
+const selectMerchantQrCode = require('./selectMerchantQrCode/index');
 const registMerchant = require('./registMerchant/index');
 
 
@@ -16,6 +17,8 @@ exports.main = async (event, context) => {
       return await notifyCreateQrCode.main(event, context);
     case 'selectSalesQrCode':
       return await selectSalesQrCode.main(event, context);
+    case 'selectMerchantQrCode':
+      return await selectMerchantQrCode.main(event, context);
     case 'registMerchant':
       return await registMerchant.main(event, context);
   }

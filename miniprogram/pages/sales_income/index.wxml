@@ -13,9 +13,9 @@
   
   <view class="box" wx:for="{{myQrCode}}" wx:key="_id">
     <view class="code_box_record">
-      <view class="code_box_record_detail">{{item.qrcodeId}}</view>
-      <view class="code_box_record_detail">{{item.name ? item.name : "店铺未注册"}}</view>
-      <view class="code_box_record_detail">{{item.income ? item.income : "暂无收益"}}</view>
+      <view class="code_box_record_detail" bindtap="previewQrCode">{{item.qrcodeId}}</view>
+      <view class="code_box_record_detail">{{item.name ? item.name : "未注册"}}</view>
+      <view class="code_box_record_detail">{{item.income ? item.income : "暂无"}}</view>
     </view>
   </view>
 </view>

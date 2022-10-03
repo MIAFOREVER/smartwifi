@@ -5,7 +5,61 @@ Page({
    * 页面的初始数据
    */
   data: {
+    envId: '',
+    haveGetOpenId: false,
+    openId: '',
+    myQrCode: [],
+  },
 
+  getOpenId() {
+    wx.showLoading({
+      title: '正在查询收益',
+    });
+    wx.cloud.callFunction({
+      name: 'smartwifi',
+      config: {
+        env: this.data.envId
+      },
+      data: {
+        type: 'getOpenId',
+      }
+    }).then((resp) => {
+      this.setData({
+        haveGetOpenId: true,
+        openId: resp.result.openid
+      });
+     console.log(this.data.openId);
+     this.selectSalesIncome()
+   }).catch((e) => {
+      this.setData({
+        showUploadTip: true
+      });
+     wx.hideLoading();
+    });
+  },
+
+  selectSalesIncome() {
+    wx.cloud.callFunction({
+      name: 'smartwifi',
+      config: {
+        env: this.data.envId
+      },
+      data: {
+        merchantId: this.data.openId,
+        type: 'selectMerchantQrCode',
+      }
+    }).then((resp) => {
+      this.setData({
+        myQrCode: resp.result.data
+      })
+      console.log(resp.result.data);
+      wx.hideLoading();
+    }).catch((e) => {
+      this.setData({
+        showUploadTip: true
+      });
+      wx.hideLoading();
+      });
   },
 
   bindViewTap() {
@@ -18,7 +72,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    this.setData({
+      envId: options.envId
+    })
+    this.getOpenId();
   },
 
   /**

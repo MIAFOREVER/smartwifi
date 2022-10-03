@@ -12,7 +12,7 @@ Page({
 
   bindMerchantTap() {
     wx.navigateTo({
-      url: '../merchant/index' + "?envId=" + envList.envId,
+      url: `../merchant/index?envId=${this.data.envList[0].envId}`,
     })
   },
   bindSalesTap() {
