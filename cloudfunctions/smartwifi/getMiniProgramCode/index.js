@@ -16,7 +16,7 @@ exports.main = async (event, context) => {
   const { buffer } = resp;
   // 将图片上传云存储空间
   const upload = await cloud.uploadFile({
-    cloudPath: 'code.png',
+    cloudPath: `${event.qrcodeId}.png`,
     fileContent: buffer
   });
   await db.collection('wifi_base').where({

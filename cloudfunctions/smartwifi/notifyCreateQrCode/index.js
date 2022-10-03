@@ -8,7 +8,7 @@ const db = cloud.database();
 // 修改数据库信息云函数入口函数
 exports.main = async (event, context) => {
   try {
-    var qrcodeId = Math.random().toString(36).substring(2);
+    var qrcodeId = Math.random().toString(36).substring(2).toUpperCase();
     await db.collection('wifi_base').add({
       // data 字段表示需新增的 JSON 数据
       data: {
