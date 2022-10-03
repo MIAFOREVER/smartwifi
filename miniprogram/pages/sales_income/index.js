@@ -15,7 +15,7 @@ Page({
       title: '正在查询收益',
     });
     wx.cloud.callFunction({
-      name: 'quickstartFunctions',
+      name: 'smartwifi',
       config: {
         env: this.data.envId
       },
@@ -39,7 +39,7 @@ Page({
 
   selectSalesIncome() {
     wx.cloud.callFunction({
-      name: 'quickstartFunctions',
+      name: 'smartwifi',
       config: {
         env: this.data.envId
       },

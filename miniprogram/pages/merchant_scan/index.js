@@ -35,7 +35,7 @@ Page({
       title: '正在注册二维码',
     });
     wx.cloud.callFunction({
-      name: 'quickstartFunctions',
+      name: 'smartwifi',
       config: {
         env: this.data.envId
       },
@@ -57,7 +57,7 @@ Page({
 
   registMerchant() {
     wx.cloud.callFunction({
-      name: 'quickstartFunctions',
+      name: 'smartwifi',
       config: {
         env: this.data.envId
       },

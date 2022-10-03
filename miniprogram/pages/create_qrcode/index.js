@@ -19,7 +19,7 @@ Page({
       title: '正在生成二维码',
     });
     wx.cloud.callFunction({
-      name: 'quickstartFunctions',
+      name: 'smartwifi',
       config: {
         env: this.data.envId
       },
@@ -43,7 +43,7 @@ Page({
 
   createQrCode() {
     wx.cloud.callFunction({
-      name: 'quickstartFunctions',
+      name: 'smartwifi',
       config: {
         env: this.data.envId
       },
@@ -66,7 +66,7 @@ Page({
 
   getCodeSrc() {
     wx.cloud.callFunction({
-      name: 'quickstartFunctions',
+      name: 'smartwifi',
       config: {
         env: this.data.envId
       },

@@ -22,7 +22,7 @@ Page({
       title: '',
     });
     wx.cloud.callFunction({
-      name: 'quickstartFunctions',
+      name: 'smartwifi',
       config: {
         env: this.data.envId
       },
