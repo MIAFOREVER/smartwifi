@@ -6,21 +6,21 @@
   <view class="income-container">
     <view class="income">
       <view class="text">今日点击次数</view>
-      <view class="number">0.4</view>
+      <view class="number">412次</view>
     </view>
     <view class="income">
       <view class="text">今日收益</view>
-      <view class="number">0.4</view>
+      <view class="number">34.12元</view>
     </view>
     <view class="income">
       <view class="text">累计提现</view>
-      <view class="number">0.4</view>
+      <view class="number">512.35元</view>
     </view>
   </view>
   <view class="income-blue">
     <view class="wallet">现金余额</view>
     <view class="money-box">
-      <view class="money">15564</view>
+      <view class="money">15564.68</view>
       <view class="yuan">元</view>
       <button type="primary" class="getmoney" size="mini">提现</button>
     </view>
