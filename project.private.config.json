@@ -58,6 +58,13 @@
           "query": "id=6AD69BOL7K5",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "用户页面",
+          "pathName": "pages/qrcode_page/index",
+          "query": "id=K46OWAJ207",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

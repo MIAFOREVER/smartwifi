@@ -4,6 +4,7 @@ const notifyCreateQrCode = require('./notifyCreateQrCode/index');
 const selectSalesQrCode = require('./selectSalesQrCode/index');
 const selectMerchantQrCode = require('./selectMerchantQrCode/index');
 const registMerchant = require('./registMerchant/index');
+const selectQrCodePassword = require('./selectQrCodePassword/index');
 
 
 // 云函数入口函数
@@ -21,5 +22,7 @@ exports.main = async (event, context) => {
       return await selectMerchantQrCode.main(event, context);
     case 'registMerchant':
       return await registMerchant.main(event, context);
+    case 'selectQrCodePassword':
+      return await selectQrCodePassword.main(event, context);
   }
 };

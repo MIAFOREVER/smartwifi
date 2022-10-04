@@ -13,6 +13,7 @@ exports.main = async (event, context) => {
     }).update({
       // data 字段表示需新增的 JSON 数据
       data: {
+        isMerchantRegist: true,
         merchantId: event.merchantId,
         ssid: event.ssid,
         password: event.password,

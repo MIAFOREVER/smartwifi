@@ -1,4 +1,9 @@
 <!--index.wxml-->
 <view class="container">
-
+  <view>
+    欢迎来到{{name}}
+  </view>
+  <view class="connet-wifi">
+    <button type="primary" bindtap="connetWiFi">点击连接WiFi</button>
+  </view>
 </view>

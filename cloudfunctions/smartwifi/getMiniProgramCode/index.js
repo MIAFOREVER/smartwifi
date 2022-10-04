@@ -10,7 +10,7 @@ exports.main = async (event, context) => {
   // 获取小程序二维码的buffer
   const resp = await cloud.openapi.wxacode.getUnlimited({
     scene: `id=${event.qrcodeId}`,
-    path: `pages/merchant_scan/index` ,
+    path: `pages/qrcode_page/index` ,
     "checkPath": true,
   });
   const { buffer } = resp;

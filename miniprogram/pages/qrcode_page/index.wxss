@@ -1,18 +1,5 @@
 /**index.wxss**/
-.btn-area{
+.connet-wifi{
   position: absolute;
-  bottom: 50px;
-  left: 120px;
-}
-
-.page-section{
-  background-color: whitesmoke;
-  border-radius: 20px;
-  width: 330px;
-  display: flex;
-  flex-direction: row;
-}
-
-.page-section-title{
-  margin: 17px;
+  bottom: 80px;
 }
