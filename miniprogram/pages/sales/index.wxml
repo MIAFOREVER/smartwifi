@@ -25,6 +25,18 @@
     </view>
     <image class="click-icon" src="./img/click.png"></image>
   </view>
+  <view class="box" bindtap="bindMyIncomeDetails">
+    <image class="icon" src="./img/rank.png"></image>
+    <view class="text-container">
+      <view class="title">
+        个人信息
+      </view>
+      <view class="subtitle">
+        查看我的收益
+      </view>
+    </view>
+    <image class="click-icon" src="./img/click.png"></image>
+  </view>
   <view class="box" bindtap="bindMyIncome">
     <image class="icon" src="./img/rank.png"></image>
     <view class="text-container">

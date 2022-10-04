@@ -8,6 +8,7 @@
     "pages/merchant/index",
     "pages/sales/index",
     "pages/sales_income/index",
+    "pages/sales_income_details/index",
     "pages/merchant_scan/index",
     "pages/logs/logs"
   ],

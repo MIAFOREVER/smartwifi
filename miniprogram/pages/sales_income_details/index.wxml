@@ -1,0 +1,52 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="title">
+    我的
+  </view>
+  <view class="income-container">
+    <view class="income">
+      <view class="text">今日点击次数</view>
+      <view class="number">0.4</view>
+    </view>
+    <view class="income">
+      <view class="text">今日收益</view>
+      <view class="number">0.4</view>
+    </view>
+    <view class="income">
+      <view class="text">累计提现</view>
+      <view class="number">0.4</view>
+    </view>
+  </view>
+  <view class="income-blue">
+    <view class="wallet">现金余额</view>
+    <view class="money-box">
+      <view class="money">15564</view>
+      <view class="yuan">元</view>
+      <button type="primary" class="getmoney" size="mini">提现</button>
+    </view>
+  </view>
+  <view class="basic-settings-container">
+    <view class="settings">
+      <image src="./img/income.png" class="icon"></image>
+      <view class="setting-text">收益详情</view>
+      <image src="./img/arrow.png" class="arrow"></image>
+    </view>
+    <view class="settings">
+      <image src="./img/setting.png" class="icon"></image>
+      <view class="setting-text">存储方式</view>
+      <view class="setting-text-detail">现金</view>
+      <image src="./img/arrow.png" class="arrow"></image>
+    </view>
+    <view class="settings">
+      <image src="./img/invite.png" class="icon"></image>
+      <view class="setting-text">邀请好友</view>
+      <image src="./img/arrow.png" class="arrow"></image>
+    </view>
+    <view class="settings">
+      <image src="./img/version.png" class="icon"></image>
+      <view class="setting-text">版本号</view>
+      <view class="setting-text-detail">1.0.6</view>
+      <image src="./img/arrow.png" class="arrow"></image>
+    </view>
+  </view>
+</view>

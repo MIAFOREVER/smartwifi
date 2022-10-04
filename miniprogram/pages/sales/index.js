@@ -20,6 +20,12 @@ Page({
     })
   },
 
+  bindMyIncomeDetails() {
+    wx.navigateTo({
+      url: `../sales_income_details/index?envId=${this.data.envId}`,
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
