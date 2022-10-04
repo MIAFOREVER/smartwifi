@@ -1,5 +1,9 @@
 // pages/qrcode_page/index.js
 const { envList } = require('../../envList.js');
+const ad = wx.createRewardedVideoAd({
+  adUnitId: 'adUnitId',
+  multiton: false,
+});
 
 Page({
 
@@ -44,6 +48,26 @@ Page({
     }).catch((e) => {
       console.log(e);
     });
+    
+  },
+
+  showAd() {
+    ad.load().then((res) => {
+      ad.show().then((res) => {
+        console.log(res)
+      }, (err) => {
+        console.log(err);
+      });
+    });
+    ad.onClose((res) => {
+      if(res.isEnded) {
+        this.connetWiFi();
+      } else {
+        wx.showToast({
+          title: '连接失败！',
+        })
+      }
+    })
   },
 
   connetWiFi() {

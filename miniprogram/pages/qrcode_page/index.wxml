@@ -4,6 +4,6 @@
     欢迎来到{{name}}
   </view>
   <view class="connet-wifi">
-    <button type="primary" bindtap="connetWiFi">点击连接WiFi</button>
+    <button type="primary" bindtap="showAd">点击连接WiFi</button>
   </view>
 </view>
