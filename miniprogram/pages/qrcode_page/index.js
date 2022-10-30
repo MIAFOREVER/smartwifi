@@ -1,9 +1,12 @@
 // pages/qrcode_page/index.js
 const { envList } = require('../../envList.js');
 const ad = wx.createRewardedVideoAd({
-  adUnitId: 'adUnitId',
+  adUnitId: 'adunit-785b0531168e2987',
   multiton: false,
 });
+ad.onError((err) => {
+  console.log(err);
+})
 
 Page({
 
@@ -35,8 +38,8 @@ Page({
       var data = res.result.data[0];
       console.log(res.result.data[0]);
       if(!data.isMerchantRegist) {
-        wx.navigateTo({
-          url: `../merchant_scan/index?id=${this.data.qrcodeId}`,
+        wx.redirectTo({
+          url: `/pages/merchant_scan/index?id=${this.data.qrcodeId}`,
         })
       } else {
         this.setData({
@@ -67,7 +70,8 @@ Page({
           title: '连接失败！',
         })
       }
-    })
+    });
+    
   },
 
   connetWiFi() {

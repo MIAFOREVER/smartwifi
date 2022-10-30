@@ -10,8 +10,9 @@ exports.main = async (event, context) => {
   // 获取小程序二维码的buffer
   const resp = await cloud.openapi.wxacode.getUnlimited({
     scene: `id=${event.qrcodeId}`,
-    path: `pages/qrcode_page/index` ,
-    "checkPath": true,
+    page: `pages/qrcode_page/index`,
+    checkPath: true,
+    envVersion: "release"
   });
   const { buffer } = resp;
   // 将图片上传云存储空间

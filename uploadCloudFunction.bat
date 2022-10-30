@@ -1,1 +1,1 @@
-"C:\Program Files (x86)\Tencent\微信web开发者工具\cli.bat" cloud functions deploy --e smartwifi-0gsbbzhj8cfd21b2 --n smartwifi --r --project "C:\Users\Administrator\WeChatProjects\smartwifi" --report_first --report
+"C:\Program Files (x86)\Tencent\微信web开发者工具\cli.bat" cloud functions deploy --e smartwlan-6gh4j3p0f8d0903e --n smartwifi --r --project "C:\Users\Administrator\WeChatProjects\smartwifi" --report_first --report

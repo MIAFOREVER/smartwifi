@@ -1,4 +1,4 @@
-const envList = [{"envId":"smartwifi-0gsbbzhj8cfd21b2","alias":"smartwifi"}]
+const envList = [{"envId":"smartwlan-6gh4j3p0f8d0903e","alias":"smartwifi"}]
 const isMac = false
 module.exports = {
     envList,
