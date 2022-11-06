@@ -11,9 +11,6 @@ Page({
   },
 
   getOpenId() {
-    wx.showLoading({
-      title: '正在查询收益',
-    });
     wx.cloud.callFunction({
       name: 'smartwifi',
       config: {
@@ -52,13 +49,39 @@ Page({
         myQrCode: resp.result.data
       })
       console.log(resp.result.data);
-      wx.hideLoading();
     }).catch((e) => {
       this.setData({
         showUploadTip: true
       });
-      wx.hideLoading();
-      });
+    });
+  },
+
+  deleteQrcode(e){
+    console.log(e)
+    wx.cloud.callFunction({
+      name: 'smartwifi',
+      config: {
+        env: this.data.envId
+      },
+      data: {
+        type: 'deleteQrcode',
+        qrcodeId: e.currentTarget.dataset.qrcodeid
+      }
+    }).then((resp) => {
+      wx.showToast({
+        title: '删除成功！',
+      })
+      this.selectSalesIncome();
+    }).catch((e) => {
+      console.log(e);
+    });
+  },
+
+  jumpToManage(e){
+    console.log(e);
+    wx.navigateTo({
+      url: '/pages/sales_qrcode_manage/index?qrcodeId=' + e.currentTarget.dataset.qrcodeid,
+    })
   },
 
   previewQrCode(e) {

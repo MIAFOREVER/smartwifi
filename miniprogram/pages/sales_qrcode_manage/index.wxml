@@ -1,0 +1,7 @@
+<!--index.wxml-->
+<view class="container">
+  <view>
+    <image src="{{data.imgID}}" mode="aspectFit"></image>
+    <button type="primary">点击保存</button>
+  </view>
+</view>

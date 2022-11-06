@@ -23,7 +23,7 @@ Page({
 
   onLoad(options) {
     this.setData({
-      qrcodeId: options.id
+      qrcodeId: options.scene
     });
     wx.cloud.callFunction({
       name: 'smartwifi',
@@ -31,7 +31,7 @@ Page({
         env: this.data.envId
       },
       data: {
-        type: 'selectQrCodePassword',
+        type: 'selectQrCode',
         qrcodeId: this.data.qrcodeId,
       }
     }).then((res) => {

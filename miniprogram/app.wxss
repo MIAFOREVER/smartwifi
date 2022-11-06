@@ -1,6 +1,10 @@
 /**app.wxss**/
+@import './miniprogram_npm/weui-miniprogram/weui-wxss/dist/style/weui.wxss';
+page{
+  background-color: #6a8cfa;
+}
 .container {
-  height: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;

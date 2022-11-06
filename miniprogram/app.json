@@ -8,15 +8,16 @@
     "pages/merchant/index",
     "pages/sales/index",
     "pages/sales_income/index",
+    "pages/sales_qrcode_manage/index",
     "pages/sales_income_details/index",
     "pages/merchant_scan/index",
     "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#6a8cfa",
     "navigationBarTitleText": "慧连网络",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "white"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

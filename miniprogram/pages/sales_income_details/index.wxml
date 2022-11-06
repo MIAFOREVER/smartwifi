@@ -1,5 +1,6 @@
 <!--index.wxml-->
-<view class="container">
+<view class="container" style="background-color: white; border-radius: 15px; width: 90%; margin-left: 5%;">
+
   <view class="title">
     我的
   </view>
@@ -49,4 +50,5 @@
       <image src="./img/arrow.png" class="arrow"></image>
     </view>
   </view>
+
 </view>
