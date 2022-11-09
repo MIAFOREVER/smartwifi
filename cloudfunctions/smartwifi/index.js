@@ -6,6 +6,8 @@ const selectMerchantQrCode = require('./selectMerchantQrCode/index');
 const registMerchant = require('./registMerchant/index');
 const selectQrCode = require('./selectQrCode/index');
 const deleteQrcode = require('./deleteQrcode/index');
+const openedQrcodeSuccess = require('./openedQrcodeSuccess/index');
+const connectQrcodeSuccess = require('./connectQrcodeSuccess/index');
 
 
 // 云函数入口函数
@@ -27,5 +29,9 @@ exports.main = async (event, context) => {
       return await selectQrCode.main(event, context);
     case 'deleteQrcode':
       return await deleteQrcode.main(event, context);
+    case 'openedQrcodeSuccess':
+      return await openedQrcodeSuccess.main(event, context);
+    case 'connectQrcodeSuccess':
+      return await connectQrcodeSuccess.main(event, context);
   }
 };

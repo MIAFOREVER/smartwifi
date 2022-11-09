@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view class="container" style="background-color: #6a8cfa; height: 100%;">
-  <view style="background-color: #6a8cfa; width: 100%; height: 200px;">
-    <view style="margin-left: 10%; margin-top: 10%;font-size: 25px; color: #FFFFFF; font-weight: 600;">慧连网络WiFi</view>
+  <view style="background-color: #6a8cfa; width: 100%; height: 180px;">
+    <view style="margin-left: 10%; margin-top: 5%;font-size: 25px; color: #FFFFFF; font-weight: 600;">慧连网络WiFi</view>
     <view style="margin-left: 10%; margin-top: 1%;font-size: 25px; color: #FFFFFF; font-weight: 600;">让每次连接都看到收益</view>
     <view style="margin-left: 10%; margin-top: 5%;font-size: 15px; color: #FFFFFF; font-weight: 600;">拿下一座城，躺赚一辈子</view>
   </view>
@@ -40,11 +40,23 @@
           查看我的收益
         </view>
         <view class="subtitle">
-          一键连接，安全防蹭网
+          实时查看，实时提现
+        </view>
+      </view>
+    </view>
+    <view class="box" bindtap="bindMyIncomeDetails">
+      <image class="icon" src="./img/guarantee.png"></image>
+      <view class="text-container">
+        <view class="title">
+          免责说明
+        </view>
+        <view class="subtitle">
+          协议条款
         </view>
       </view>
     </view>
   </view>
+  
   <view style="background-color: #FFFFFF; height: 300px; width: 90%; margin-top: 20px; border-radius: 20px;">
     <view style="margin-top: 20px; margin-left: 20px; color: #fcaf01; font-weight: 600; font-size: 20px;">特色功能</view>
     <view style="flex-direction: row; display: flex; margin-top: 20px;">

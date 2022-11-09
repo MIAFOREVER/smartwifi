@@ -3,10 +3,10 @@
   <form catchsubmit="formSubmit" catchreset="formReset">
 
     <view class="page-section">
-      <view class="page-section-title">店铺名称</view>
-      <view class="weui-cells weui-cells_after-title">
-        <view class="weui-cell weui-cell_input">
-          <view class="weui-cell__bd" style="margin: 30rpx 0" >
+      <view class="page-section-title" style="align-self:center">店铺名称</view>
+      <view class="weui-cells weui-cells_after-title" style=" width: 60%;margin-bottom: 10px;">
+        <view class="weui-cell weui-cell_input" >
+          <view class="weui-cell__bd" style="margin: 30rpx 0;" >
             <input class="weui-input" name="name" placeholder="请输入店家名称" />
           </view>
         </view>
@@ -14,8 +14,8 @@
     </view>
 
     <view class="page-section">
-      <view class="page-section-title">WiFi名称</view>
-      <view class="weui-cells weui-cells_after-title">
+      <view class="page-section-title" style="align-self:center">WiFi名称</view>
+      <view class="weui-cells weui-cells_after-title" style=" width: 60%;margin-bottom: 10px;">
         <view class="weui-cell weui-cell_input">
           <view class="weui-cell__bd" style="margin: 30rpx 0" >
             <input class="weui-input" name="ssid" placeholder="请输入WiFi名称" />
@@ -25,8 +25,8 @@
     </view>
 
     <view class="page-section">
-      <view class="page-section-title">WiFi密码</view>
-      <view class="weui-cells weui-cells_after-title">
+      <view class="page-section-title" style="align-self:center">WiFi密码</view>
+      <view class="weui-cells weui-cells_after-title" style=" width: 60%;margin-bottom: 10px;">
         <view class="weui-cell weui-cell_input">
           <view class="weui-cell__bd" style="margin: 30rpx 0" >
             <input class="weui-input" name="password" placeholder="请输入WiFi密码" />
@@ -36,7 +36,7 @@
     </view>
 
     <view class="btn-area">
-      <button type="primary" formType="submit">注册二维码</button>
+      <button formType="submit">注册二维码</button>
     </view>
   </form>
 </view>

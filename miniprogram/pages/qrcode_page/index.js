@@ -57,16 +57,48 @@ Page({
   showAd() {
     ad.load().then((res) => {
       ad.show().then((res) => {
-        console.log(res)
+        console.log(res);
+        wx.cloud.callFunction({
+          name: 'smartwifi',
+          config: {
+            env: this.data.envId
+          },
+          data: {
+            type: 'openedQrcodeSuccess',
+            qrcodeId: this.data.qrcodeId,
+          }
+        }).then((res) => {
+          console.log(res);
+        }).catch((e) => {
+          console.log(e);
+        });
       }, (err) => {
         console.log(err);
+        this.connetWiFi();
       });
+    }, (err) => {
+      console.log(err);
+      this.connetWiFi();
     });
     ad.onClose((res) => {
       if(res.isEnded) {
         this.connetWiFi();
+        wx.cloud.callFunction({
+          name: 'smartwifi',
+          config: {
+            env: this.data.envId
+          },
+          data: {
+            type: 'connectQrcodeSuccess',
+            qrcodeId: this.data.qrcodeId,
+          }
+        }).then((res) => {
+        }).catch((e) => {
+          console.log(e);
+        });
       } else {
         wx.showToast({
+          icon: "error",
           title: '连接失败！',
         })
       }

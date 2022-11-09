@@ -10,13 +10,14 @@
     "pages/sales_income/index",
     "pages/sales_qrcode_manage/index",
     "pages/sales_income_details/index",
+    "pages/sales_income_get_cash/index",
     "pages/merchant_scan/index",
     "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#6a8cfa",
-    "navigationBarTitleText": "慧连网络",
+    "navigationBarTitleText": "凌云天昊",
     "navigationBarTextStyle": "white"
   },
   "style": "v2",

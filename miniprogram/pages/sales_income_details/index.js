@@ -61,6 +61,12 @@ Page({
       });
   },
 
+  jumpToGetCash(){
+    wx.navigateTo({
+      url: '/pages/sales_income_get_cash/index',
+    })
+  },
+
   previewQrCode(e) {
     
   },

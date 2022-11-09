@@ -1,0 +1,17 @@
+<!--index.wxml-->
+<view class="container" style="background-color: white; border-radius: 15px; width: 90%; margin-left: 5%;">
+  <view class="weui-panel weui-panel_access" style="width:90%; margin-top: 20px;">
+    <view class="weui-panel__hd">提现</view>
+    <view class="weui-form-preview">
+      <view class="weui-form-preview__bd">
+        <view class="weui-form-preview__item">
+          <view class="weui-form-preview__label">提现金额</view>
+          <input class="weui-form-preview__value" bindinput="inputPrice" type="digit" confirm-type="done" placeholder="元"></input>
+        </view>
+      </view>
+    </view>
+    <view style="flex-direction: row; display: flex;">
+      <button type="primary" style="margin-top: 20px; margin-bottom: 20px; width: 40%;" bindtap="bindEditPrice">提交提现</button>
+    </view>
+  </view>
+</view>

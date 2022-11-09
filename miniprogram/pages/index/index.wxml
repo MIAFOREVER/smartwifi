@@ -1,14 +1,14 @@
 <!--index.wxml-->
 <view class="container">
   <view class="userinfo">
-    <image style="width: 200px; height: 200px; background-color: #eeeeee;" src="../../logo/logo.jpg"></image>
+    <image style="width: 200px; height: 200px; background-color: #eeeeee;" src="../../logo/logo.png"></image>
     <view class="login">
       <view class="choose_user">
-        <button type="primary" bindtap="bindMerchantTap">我是商家</button>
+        <button bindtap="bindMerchantTap">我是商家</button>
       </view>
       <view class="choose_user">
-        <button type="primary" bindtap="bindSalesTap">我是推广</button>
+        <button bindtap="bindSalesTap">我是推广</button>
       </view>
-    </view> 
+    </view>
   </view>
 </view>
