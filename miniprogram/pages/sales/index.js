@@ -26,6 +26,12 @@ Page({
     })
   },
 
+  bindDisclaimers() {
+    wx.navigateTo({
+      url: `../disclaimer/index?envId=${this.data.envId}`,
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */

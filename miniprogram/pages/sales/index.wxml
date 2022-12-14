@@ -44,7 +44,7 @@
         </view>
       </view>
     </view>
-    <view class="box" bindtap="bindMyIncomeDetails">
+    <view class="box" bindtap="bindDisclaimers">
       <image class="icon" src="./img/guarantee.png"></image>
       <view class="text-container">
         <view class="title">

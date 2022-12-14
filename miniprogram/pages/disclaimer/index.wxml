@@ -1,0 +1,66 @@
+<!--index.wxml-->
+<!--index.wxml-->
+<view class="page">
+  <view class="weui-panel weui-panel_access">
+    <view>
+      <view class="weui-form-preview">
+        <view class="weui-form-preview__bd">
+          <view class="weui-panel__hd" style="text-align: left;">订单明细，用户编码：{{pathId}}</view>
+          <view class="weui-form-preview__item">
+            <view class="weui-form-preview__label">订单号</view>
+            <view class="weui-form-preview__value">{{orderList.id}}</view>
+          </view>
+          <view class="weui-form-preview__item">
+            <view class="weui-form-preview__label">下单时间</view>
+            <view class="weui-form-preview__value">{{orderList.date}}</view>
+          </view>
+          <view class="weui-form-preview__item">
+            <view class="weui-form-preview__label">姓名</view>
+            <view class="weui-form-preview__value">{{address.name}}</view>
+          </view>
+          <view class="weui-form-preview__item">
+            <view class="weui-form-preview__label">电话</view>
+            <view class="weui-form-preview__value">{{address.phone}}</view>
+          </view>
+          <view class="weui-form-preview__item">
+            <view class="weui-form-preview__label">国家</view>
+            <view class="weui-form-preview__value">{{address.country}}</view>
+          </view>
+          <view class="weui-form-preview__item">
+            <view class="weui-form-preview__label">邮编</view>
+            <view class="weui-form-preview__value">{{address.postNumber}}</view>
+          </view>
+          <view class="weui-form-preview__item">
+            <view class="weui-form-preview__label">省州</view>
+            <view class="weui-form-preview__value">{{address.province}}</view>
+          </view>
+          <view class="weui-form-preview__item">
+            <view class="weui-form-preview__label">城市</view>
+            <view class="weui-form-preview__value">{{address.city}}</view>
+          </view>
+          <view class="weui-form-preview__item">
+            <view class="weui-form-preview__label">详细地址</view>
+            <view class="weui-form-preview__value">{{address.address}}</view>
+          </view>
+          <view class="weui-form-preview__item">
+            <view class="weui-form-preview__label">寄送方式</view>
+            <view class="weui-form-preview__value">{{address.transType}}</view>
+          </view>
+          <view class="weui-panel__hd" style="text-align: left;">国内包裹清单，共计{{orderList.packageList.length}}件</view>
+          <view class="weui-form-preview__item" wx:for="{{orderList.packageList}}" wx:for-index="idx">
+            <view class="weui-form-preview__label">包裹{{idx + 1}}:</view>
+            <view class="weui-form-preview__value">{{item.num}}：{{item.weight? "已入库" : "未入库"}} {{item.weight}}kg</view>
+          </view>
+        </view>
+        <view class="weui-form-preview__bd" wx:if="{{orderList.imgSrc}}" style="text-align: center;">
+          <image mode="aspectFit" bindtap="previewImage"  src="{{orderList.imgSrc}}" data-src="{{orderList.imgSrc}}" lazy-load class='img-preview'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="page__bd page__bd_spacing">
+    <view class="weui-footer">
+      <view class="weui-footer__text">Copyright © 2010-2022 慧连网络</view>
+    </view>
+  </view>
+</view>

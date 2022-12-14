@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "wx-server-sdk": "~2.4.0"
+    "wx-server-sdk": "~2.4.0",
+    "wechatpay-node-v3": "2.0.6"
   }
 }
