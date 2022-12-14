@@ -8,7 +8,6 @@ const selectQrCode = require('./selectQrCode/index');
 const deleteQrcode = require('./deleteQrcode/index');
 const openedQrcodeSuccess = require('./openedQrcodeSuccess/index');
 const connectQrcodeSuccess = require('./connectQrcodeSuccess/index');
-const transfer = require('./transfer/index');
 
 
 // 云函数入口函数
@@ -34,7 +33,5 @@ exports.main = async (event, context) => {
       return await openedQrcodeSuccess.main(event, context);
     case 'connectQrcodeSuccess':
       return await connectQrcodeSuccess.main(event, context);
-    case 'transfer':
-      return await transfer.main(event, context);
   }
 };

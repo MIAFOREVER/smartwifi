@@ -34,6 +34,7 @@ Page({
      console.log(this.data.openId);
      this.createQrCode();
    }).catch((e) => {
+     console.log(e);
       this.setData({
         showUploadTip: true
       });
