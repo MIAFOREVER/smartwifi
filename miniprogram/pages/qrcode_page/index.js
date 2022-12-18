@@ -134,6 +134,7 @@ Page({
       },
       fail (res) {
         console.log(res);
+        
       },
       complete (res) {
         console.log(res);
