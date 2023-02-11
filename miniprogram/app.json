@@ -1,25 +1,13 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/choose_user/index",
-    "pages/create_qrcode/index",
-    "pages/preview_qrcode/index",
-    "pages/qrcode_page/index",
-    "pages/merchant/index",
-    "pages/sales/index",
-    "pages/sales_income/index",
-    "pages/sales_qrcode_manage/index",
-    "pages/sales_income_details/index",
-    "pages/sales_income_get_cash/index",
-    "pages/disclaimer/index",
-    "pages/merchant_scan/index",
-    "pages/logs/logs"
+    "pages/index/index"
   ],
   "window": {
+    "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#6a8cfa",
-    "navigationBarTitleText": "凌云天昊",
-    "navigationBarTextStyle": "white"
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "ChatGPT",
+    "navigationBarTextStyle": "black"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

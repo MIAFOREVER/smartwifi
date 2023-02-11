@@ -8,17 +8,52 @@ Page({
    */
   data: {
     envList,
+    chatlist: [{
+      text: "欢迎使用 ChatGPT AI 对话",
+      response: "谢谢！"
+    }],
+    text: "",
   },
 
-  bindMerchantTap() {
-    wx.navigateTo({
-      url: `../merchant/index?envId=${this.data.envList[0].envId}`,
+  inputText(res) {
+    console.log(res.detail.value);
+    this.setData({
+      text: res.detail.value
     })
   },
-  bindSalesTap() {
-    wx.navigateTo({
-      url: `../sales/index?envId=${this.data.envList[0].envId}`,
+
+  handleTextInput(res) {
+    wx.showLoading({
+      title: '加载中',
     })
+    wx.cloud.callFunction({
+      name: 'smartwifi',
+      data: {
+        type: 'addText',
+        prompt: this.data.text,
+        parentMessageId: this.data.parentMessageId,
+        conversationId: this.data.conversationId
+      }
+    }).then((resp) => {
+      const data = resp.result;
+      console.log(data);
+      const chatlist = this.data.chatlist;
+      chatlist.push({
+          text: this.data.text,
+          response: data.text,
+        });
+      console.log(chatlist)
+      this.setData({
+        chatlist: chatlist,
+        parentMessageId: data.id,
+        conversationId: data.conversationId,
+        text: ""
+      })
+      wx.hideLoading()
+    }).catch((e) => {
+      console.log(e);
+      wx.hideLoading()
+    });
   },
 
   /**

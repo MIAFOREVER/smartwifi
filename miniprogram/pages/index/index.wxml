@@ -1,14 +1,35 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <image style="width: 200px; height: 200px; background-color: #eeeeee;" src="../../logo/logo.png"></image>
-    <view class="login">
-      <view class="choose_user">
-        <button bindtap="bindMerchantTap">我是商家</button>
+<view>
+  <view style="height: 88vh; overflow:scroll">
+    <view class="package-container" wx:for="{{chatlist}}" >
+      <view class="weui-form-preview" style="width: 100%;">
+        <view class="weui-form-preview__hd">
+          <view class="weui-form-preview__item">
+            <view class="weui-form-preview__label">我</view>
+            <view class="weui-form-preview__value_in-hd">{{item.text}}</view>
+          </view>
+        </view>
       </view>
-      <view class="choose_user">
-        <button bindtap="bindSalesTap">我是推广</button>
+      <view class="weui-form-preview" style="width: 100%; background-color: #f7f7f8;">
+        <view class="weui-form-preview__hd">
+          <view class="weui-form-preview__item">
+            <view class="weui-form-preview__label">ChatGPT</view>
+            <view class="weui-form-preview__value_in-hd">{{item.response}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view style="width: 100%; height: 8vh;">
+    <view class="page-section">
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <textarea class="weui-input" placeholder="请输入内容" bindinput="inputText" confirm-type="done" auto-height />
+          <button style="width: 60px; background-color: white;" bindtap="handleTextInput"><image src="./img/paperplane.png" style="width: 20px; height: 20px;"></image></button>
+        </view>
       </view>
     </view>
   </view>
 </view>
+  
+
