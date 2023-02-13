@@ -1,5 +1,6 @@
 // pages/index/index.js
 const { envList } = require('../../envList.js');
+let videoAd = null
 
 Page({
 
@@ -8,51 +9,104 @@ Page({
    */
   data: {
     envList,
-    chatlist: [{
-      text: "欢迎使用 ChatGPT AI 对话",
-      response: "谢谢！"
-    }],
+    chatlist: [],
     text: "",
+    showText: "",
+    disable: false,
+  },
+
+  charge(times){
+    wx.cloud.callFunction({
+      name: 'smartwifi',
+      data: {
+        type: 'addText',
+        dataType: 'charge',
+        times: times
+      }
+    }).then(res => {
+      this.setData({
+        availableTimes: this.data.availableTimes + times
+      })
+    })
   },
 
   inputText(res) {
     console.log(res.detail.value);
     this.setData({
-      text: res.detail.value
+      text: res.detail.value,
     })
   },
 
+  showText(text, index){
+    const chatlist = this.data.chatlist;
+    setTimeout(() => {
+      if(index <= text.length){
+        chatlist[chatlist.length - 1] = {
+          text: this.data.showText,
+          response: text.substr(0, index),
+        };
+        index = index + 1;
+        this.setData({
+          chatlist: chatlist
+        })
+        this.showText(text, index);
+      } else {
+        this.setData({disable: false})
+      }
+    }, 70)
+  },
+
   handleTextInput(res) {
-    wx.showLoading({
-      title: '加载中',
+    if(this.data.text === '') {
+      wx.showToast({
+        title: '输入不能为空',
+        icon: "error"
+      })
+      return ;
+    }
+    this.setData({
+      showText: this.data.text,
     })
+    if(this.data.text === "X3BX58P9") {
+      this.charge(1000);
+      return ;
+    }
+    const chatlist = this.data.chatlist;
+    chatlist.push({
+      text: this.data.text,
+      response: "加载中"
+    })
+    this.setData({
+      chatlist: chatlist
+    })
+    this.setData({disable: true})
     wx.cloud.callFunction({
       name: 'smartwifi',
       data: {
         type: 'addText',
+        dataType: "request",
         prompt: this.data.text,
         parentMessageId: this.data.parentMessageId,
         conversationId: this.data.conversationId
       }
     }).then((resp) => {
-      const data = resp.result;
-      console.log(data);
-      const chatlist = this.data.chatlist;
-      chatlist.push({
-          text: this.data.text,
-          response: data.text,
-        });
-      console.log(chatlist)
+      console.log(resp);
+      const data = resp.result.data;
+      
       this.setData({
-        chatlist: chatlist,
         parentMessageId: data.id,
         conversationId: data.conversationId,
-        text: ""
+        text: "",
+        availableTimes: this.data.availableTimes == 0 ? this.data.availableTimes : this.data.availableTimes - 1
       })
-      wx.hideLoading()
+      if(resp.result.dataType === "errorData") {
+        this.showText("当前无可用额度", 0);
+      } else {
+        this.showText(data.text, 0);
+      }
     }).catch((e) => {
       console.log(e);
-      wx.hideLoading()
+      this.setData({disable: false})
     });
   },
 
@@ -60,7 +114,18 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    if (wx.createRewardedVideoAd) {
+      videoAd = wx.createRewardedVideoAd({
+        adUnitId: 'adunit-785b0531168e2987'
+      })
+      videoAd.onLoad(() => {})
+      videoAd.onError((err) => {})
+      videoAd.onClose((res) => {
+        if(res.isEnded) {
+          this.charge(5);
+        }
+      })
+    }
   },
 
   /**
@@ -74,7 +139,32 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
+    wx.cloud.callFunction({
+      name: 'smartwifi',
+      data: {
+        type: 'addText',
+        dataType: 'queryAvailableTimes'
+      }
+    }).then(res => {
+      console.log(res);
+      this.setData({
+        availableTimes: res.result.data.availableTimes
+      })
+    })
+  },
 
+  watchVideoToChargeAvailableTimes(){
+    // 用户触发广告后，显示激励视频广告
+    if (videoAd) {
+      videoAd.show().catch(() => {
+        // 失败重试
+        videoAd.load()
+          .then(() => videoAd.show())
+          .catch(err => {
+            console.log('激励视频 广告显示失败')
+          })
+      })
+    }
   },
 
   /**

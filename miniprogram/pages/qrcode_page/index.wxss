@@ -1,5 +1,0 @@
-/**index.wxss**/
-.connet-wifi{
-  position: absolute;
-  bottom: 80px;
-}

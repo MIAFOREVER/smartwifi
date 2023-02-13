@@ -1,0 +1,46 @@
+/**index.wxss**/
+
+page {
+  padding-top: 54rpx;
+  background-color: #f6f6f6;
+  padding-bottom: 60rpx;
+}
+
+.title {
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #000000;
+  font-size: 44rpx;
+  margin-bottom: 40rpx;
+}
+
+.top_tip {
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #888888;
+  margin-bottom: 28rpx;
+}
+
+.button-container{
+  margin-top: 20px;
+}
+
+.weui-footer{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+ 
+button {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border-radius: 0;
+  background-color: transparent;
+  line-height: inherit;
+  width: max-content;
+}
+button:after {
+  border: none;
+}

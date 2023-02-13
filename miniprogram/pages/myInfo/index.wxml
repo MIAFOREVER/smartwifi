@@ -1,0 +1,20 @@
+<!--index.wxml-->
+<view class="page">
+  <mp-cells>
+    <mp-cell>
+      <view slot="title" style="position: relative;margin-right: 10px;">
+        <image src="https://picsum.photos/200/200" style="width: 50px; height: 50px; display: block"/>
+      </view>
+      <view>当前可用次数 {{availableTimes}} 次，每次提问消耗1点数</view>
+    </mp-cell>
+    <!-- <mp-cell link>
+      <view bindtap="chargeAvailableTimes">充值使用次数</view>
+    </mp-cell> -->
+    <mp-cell>
+      <button bindtap="shareToChargeAvailableTimes" open-type="share" style="left: 0;">邀请好友获得20点次数</button>
+    </mp-cell>
+    <mp-cell>
+      <button bindtap="watchVideoToChargeAvailableTimes">观看视频获得5点次数</button>
+    </mp-cell>
+  </mp-cells>
+</view>

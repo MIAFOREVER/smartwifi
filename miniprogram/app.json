@@ -1,6 +1,7 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/myInfo/index"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -9,6 +10,27 @@
     "navigationBarTitleText": "ChatGPT",
     "navigationBarTextStyle": "black"
   },
+  "tabBar": {
+    "color": "@tabBarColor",
+    "selectedColor": "@tabBarSelectedColor",
+    "borderStyle": "@tabBarBorderStyle",
+    "backgroundColor": "@tabBarBackgroundColor",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "@iconPathComponent",
+        "selectedIconPath": "@selectedIconPathComponent",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/myInfo/index",
+        "iconPath": "@iconPathMine",
+        "selectedIconPath": "@selectedIconPathMine",
+        "text": "我的"
+      }
+    ]
+  },
   "style": "v2",
+  "themeLocation": "theme.json",
   "sitemapLocation": "sitemap.json"
 }
