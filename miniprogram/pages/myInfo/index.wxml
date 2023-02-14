@@ -11,10 +11,10 @@
       <view bindtap="chargeAvailableTimes">充值使用次数</view>
     </mp-cell> -->
     <mp-cell>
-      <button bindtap="shareToChargeAvailableTimes" open-type="share" style="left: 0;">邀请好友获得20点次数</button>
+      <button bindtap="shareToChargeAvailableTimes" open-type="share" style="width: 100%">点击此处邀请好友获得20点次数，每日限一次</button>
     </mp-cell>
     <mp-cell>
-      <button bindtap="watchVideoToChargeAvailableTimes">观看视频获得5点次数</button>
+      <button bindtap="watchVideoToChargeAvailableTimes" style="width: 100%">点击此处观看视频获得5点次数</button>
     </mp-cell>
   </mp-cells>
 </view>

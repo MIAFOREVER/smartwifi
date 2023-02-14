@@ -102,7 +102,10 @@ Page({
       if(resp.result.dataType === "errorData") {
         this.showText("当前无可用额度", 0);
       } else {
-        this.showText(data.text, 0);
+        if(data.text)
+          this.showText(data.text, 0);
+        else 
+          this.showText("当前网络繁忙，请重试", 0);
       }
     }).catch((e) => {
       console.log(e);

@@ -26,8 +26,8 @@
           </view>
         </view>
       </view>
-      <view class="weui-media-box weui-media-box_text" aria-role="option" style="background-color: #f7f7f8; flex-direction: row; display: flex;">
-        <text class="weui-media-box__title"	user-select="{{true}}" space="ensp">{{item.response}}</text>
+      <view class="weui-media-box weui-media-box_text" style="background-color: #f7f7f8; flex-direction: row; display: flex; width: 90vw;">
+        <text class="weui-media-box__title"	user-select="{{true}}" space="ensp" style="word-wrap: break-word; word-break: break-all; white-space: pre-line;">{{item.response}}</text>
         <view aria-role="img" aria-label="正在加载" class="weui-loading" wx:if="{{item.response == '加载中'}}"></view>
       </view>
     </view>

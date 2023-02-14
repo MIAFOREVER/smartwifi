@@ -6,20 +6,6 @@
     "miniprogram": {
       "list": [
         {
-          "name": "商家扫码",
-          "pathName": "pages/merchant_scan/index",
-          "query": "id=DDZQYHYVSEO",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "用户页面",
-          "pathName": "pages/qrcode_page/index",
-          "query": "scene=P32000VDT6",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
           "name": "首页",
           "pathName": "pages/index/index",
           "query": "",
